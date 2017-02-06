@@ -1,0 +1,15 @@
+<%= link_to "レポート作成", :action => :new %>
+<table>
+  <tr>
+    <th>レポート名</th>
+    <th>メルマガ数</th>
+    <th>ステータス</th>
+  </tr>
+  <% @reports.each do |a| %>
+  <tr>
+    <td><%= a.reportable? ? link_to(a.name, report_path(a)) : a.name %></td>
+    <td><%= a.article_id_list.size %></td>
+    <td><%= a.status %></td>
+  </tr>
+  <% end %>
+</table>

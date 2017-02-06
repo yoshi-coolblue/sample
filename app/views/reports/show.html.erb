@@ -1,0 +1,4 @@
+<%= link_to("一覧に戻る",reports_path) %><br/>
+<%= link_to 'このレポートを削除', report_path(@report), :method => :delete %>
+<%= high_chart("ariticles", @report_articles_graph) %>
+<%= high_chart("timezone", @timezone_graph) %>
